@@ -529,9 +529,9 @@ class JudicialScraper:
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="司法院裁判書系統爬蟲工具 (報表修正版)")
-    parser.add_argument("target_name", type=str, help="目標人物姓名, e.g., \"許家瑋\"")
-    parser.add_argument("keyword", type=str, help="搜尋關鍵字, e.g., \"許家瑋 本票裁定\"")
-    parser.add_argument("max_records", type=int, help="最大擷取筆數, e.g., 5")
+    parser.add_argument("target_name", type=str, help="目標人物姓名, e.g., \"張三\"")
+    parser.add_argument("keyword", type=str, help="搜尋關鍵字, e.g., \"張三 本票裁定\"")
+    parser.add_argument("max_records", type=int, help="最大擷取筆數, e.g., 20")
          
     try:
         args = parser.parse_args()
@@ -546,5 +546,5 @@ if __name__ == '__main__':
         if e.code != 0:  # 只有在真正錯誤時才顯示幫助
             print("\n使用方式:")
             print("python fixed02.py <目標人物姓名> <搜尋關鍵字> <最大筆數>")
-            print("範例: python fixed02.py \"許家瑋\" \"許家瑋 本票裁定\" 100")
+            print("範例: python fixed02.py \"張三\" \"張三 本票裁定\" 100")
         pass
